@@ -1,9 +1,9 @@
-module tbbinary;
+module tb_binary;
 reg [7:0]binary;
-wire (7:0]dec;
+wire [7:0]dec;
 wire [7:0]hexa;
 wire [7:0]octal;
-binary dut (octal,dec,hexa, binary);
+binary dut (octal, dec, hexa, binary);
 initial
 begin
 binary=8'b00101010;
