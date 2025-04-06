@@ -1,8 +1,8 @@
-module hs(diff, borrow, a, b);
-    input a, b;
+module hs(diff, borrow, a, b, c);
+    input a, b, c;
     output diff, borrow;
 	
-	assign diff = a^b;
-  assign borrow = (~a) & b;
+	assign diff = a^b^c;
+	assign borrow = ((~a)&b) | (b&c) | ((~a)&c);
 
 endmodule
