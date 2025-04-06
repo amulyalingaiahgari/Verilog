@@ -14,10 +14,10 @@ module fs_using_ha(a,b,c,diff,borrow);
 
 endmodule
 
-module ha(a,b,s,c);
+module ha(a,b,sum,carry);
 	input a,b;
-	output s,c;
+	output sum,carry;
 	
-	assign s=a^b;
-	assign c=a&b;
+	assign sum=a^b;
+	assign carry=a&b;
 endmodule
