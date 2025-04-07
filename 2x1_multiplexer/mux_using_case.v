@@ -1,8 +1,8 @@
 module mux(y,sel,a,b);
   input sel,a,b;
-  output y;
+  output reg y;
 
-  always @ (se or a or b)
+  always @ (sel or a or b)
     begin
       case(sel)
         1'b0: y=a;
