@@ -3,10 +3,10 @@ module cla_adder(s,c3,a,b,c);
     input cin;
     output [3:0] s;
     output c4;
-
-	wire p0,p1,p2,p3;//propagate = a^b
-  wire g0,g1,g2,g3;//generate = a&b
-  wire c1,c2,c3;//internal carry
+	
+    wire p0,p1,p2,p3;//propagate = a^b
+    wire g0,g1,g2,g3;//generate = a&b
+    wire c1,c2,c3;//internal carry
 	
 	xor x1(p0,a[0],b[0]);
 	xor x2(p1,a[1],b[1]);
