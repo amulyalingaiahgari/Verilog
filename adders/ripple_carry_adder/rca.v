@@ -16,7 +16,7 @@ endmodule
 
 
 
-module fa(sum,carry,a,b,c);
+module fa(a,b,c,sum,carry);
 	input a,b,c;
 	output sum,carry;
 	
