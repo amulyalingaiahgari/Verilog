@@ -3,7 +3,7 @@ module tb_demux;
   wire a,b;
 
   demux dut(a,b,sel,y);
-  initial 
+  initial
     begin
       sel=0; y=0;
       #5 sel=0; y=1;
