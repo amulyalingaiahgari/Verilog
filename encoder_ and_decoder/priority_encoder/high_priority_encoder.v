@@ -19,7 +19,7 @@ end
 else if(i[1])begin
 y=1;v=1;
 end
-else if(i[ø])begin
+  else if(i[0])begin
 y=0;v=1;
 end
 end
