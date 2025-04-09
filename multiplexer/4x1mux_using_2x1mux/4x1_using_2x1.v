@@ -15,7 +15,7 @@ module mux_4x1(
   
   wire y0, y1;
   
-  mux_2_1 m1(sell, i2, i3, y1);
-  mux_2_1 m2(sell, i0, i1, y0);
-  mux_2_1 m3(sel0, y0, y1, y);
+  mux_2x1 m1(sell, i2, i3, y1);
+  mux_2x1 m2(sell, i0, i1, y0);
+  mux_2x1 m3(sel0, y0, y1, y);
 endmodule
