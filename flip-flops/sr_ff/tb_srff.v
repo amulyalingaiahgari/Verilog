@@ -14,5 +14,6 @@ module tb;
       #4 s = {random}%2;
       r = {random}%2;
     end
+    #4 $finish;
   end
 endmodule
