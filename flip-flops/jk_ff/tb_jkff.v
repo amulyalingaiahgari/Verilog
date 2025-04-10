@@ -1,20 +1,19 @@
-module JK_flipflop (
-  input clk, rst_n,
-  input j,k,
-  output reg q,
-  output q_bar);
+module tb;
+  reg clk, rst_n;
+  reg j, k;
+  wire q, q_bar;
   
-  // always@(posedge clk or negedge rst_n) // for asynchronous reset
-  always @(posedge clk) begin // for synchronous reset
-    if(!rst_n) q <= 0;
-    else begin
-      case({j,k})
-        2'b00: q <= q;    // No change
-        2'b01: q <= 1'b0; // reset
-        2'b10: q <= 1'b1; // set
-        2'b11: q <= ~q;   // Toggle
-      endcase
+  JK_flipflop ff(clk, rst_n, j, k, q, q_bar);
+  
+  always #2 clk = ~clk;
+    initial begin
+    clk = 0; 
+    rst_n = 0;
+    #4 rst_n =1;
+    repeat(10) @(posedge clk) begin
+      #4 j = {random}%2;
+      k = {random}%2;
     end
+    #4 $finish;
   end
-  assign q_bar = ~q;
 endmodule
