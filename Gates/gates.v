@@ -2,7 +2,7 @@ module gates (y, a,b, control);
 input a, b, control;
 output y;
 
-and g1 (y,a,b);
+//and g1 (y,a,b);
 or g2(y,a,b);
 not g3(y,a);
 nand g4(y,a,b);
