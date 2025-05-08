@@ -8,7 +8,7 @@
 	wire carry;
 
 	// Instantiate the Unit Under Test (UUT)
-	fa_using_ha uut (
+	fa uut (
 		.a(a), 
 		.b(b), 
 		.c(c), 
