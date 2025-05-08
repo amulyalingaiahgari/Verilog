@@ -1,4 +1,4 @@
-module fa_using_hs(sum,carry,a,b,c);
+module fa(sum,carry,a,b,c);
     input a,b,c;
     output sum,carry;
 	
