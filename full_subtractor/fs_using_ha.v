@@ -1,4 +1,4 @@
-module fs_using_ha(a,b,c,diff,borrow);
+module fs(a,b,c,diff,borrow);
     input a,b,c;
     output diff,borrow;
 	
