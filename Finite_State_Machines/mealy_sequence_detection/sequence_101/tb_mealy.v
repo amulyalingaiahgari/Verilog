@@ -13,10 +13,10 @@ module tb_mealy;
     rst=1;
     #4 rst=0;
     repeat(10) @(posedge clk) begin
-      #4 data_in<=($random)%2;
+      #4 data_in<={$random}%2;
     end
     repeat(20) @(posedge clk) begin
-      #4 data_in<=($random)%2;
+      #4 data_in<={$random}%2;
     end
     #10 $finish;
   end
