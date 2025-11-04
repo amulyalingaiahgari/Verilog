@@ -1,10 +1,10 @@
-module tbas ;
+module tb_add_sub ;
 reg [3:0]A, B;
 reg cin;
 wire [3:0]s;
 wire c3;
   
-rca_s uut (c3,s,A, B, cin) ;
+add_sub uut (c3,s,A, B, cin) ;
 initial
 begin
 cin=0;
