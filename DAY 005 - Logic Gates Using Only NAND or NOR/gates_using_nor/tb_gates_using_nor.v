@@ -6,11 +6,7 @@ module gates_using_nor_tb;
 	wire y;
 
 	// Instantiate the Unit Under Test (UUT)
-	gates_using_nor uut (
-		.a(a), 
-		.b(b), 
-		.y(y)
-	);
+	gates_using_nor uut (.a(a), .b(b), .y(y));
 
 	initial begin
 		// Initialize Inputs
