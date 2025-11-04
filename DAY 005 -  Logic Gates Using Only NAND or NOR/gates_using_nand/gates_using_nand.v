@@ -1,23 +1,3 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    05/04/2025 
-// Design Name: 
-// Module Name:    gates_using_nand 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module gates_using_nand(a, b, y);
     input a, b;
     output y;
@@ -49,7 +29,7 @@ module gates_using_nand(a, b, y);
 	nand_gate a4(w2,w3,y);
 	*/
 	
-	//exnor gate
+	//e-xnor gate
 	nand_gate a1(a,b,w1);
 	nand_gate a2(a,w1,w2);
 	nand_gate a3(b,w1,w3);
