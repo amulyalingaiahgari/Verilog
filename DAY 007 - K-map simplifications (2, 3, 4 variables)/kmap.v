@@ -1,5 +1,5 @@
 //======================================================
-// Day 9 - Example 1: 2-variable K-map simplification
+// Day 7 - Example 1: 2-variable K-map simplification
 // F(A,B) = Σ(1,2) -> F = A'B + AB' = A XOR B
 //======================================================
 module kmap2 (
@@ -11,7 +11,7 @@ endmodule
 
 
 //======================================================
-// Day 9 - Example 2: 3-variable K-map simplification
+// Day 7 - Example 2: 3-variable K-map simplification
 // F(A,B,C) = Σ(1,2,5,7) -> F = A'BC' + B'C + AC
 //======================================================
 module kmap3 (
@@ -23,7 +23,7 @@ endmodule
 
 
 //======================================================
-// Day 9 - Example 3: 4-variable K-map simplification
+// Day 7 - Example 3: 4-variable K-map simplification
 // F(A,B,C,D) = Σ(0,2,5,7,8,10,13,15)
 // Simplified: F = B'D' + BD
 //======================================================
