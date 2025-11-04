@@ -1,4 +1,4 @@
-        module fa_tb;
+module fa_tb;
 	// Inputs
 	reg a;
 	reg b;
@@ -28,4 +28,4 @@
 		#10 $finish;
 	end
       
-        endmodule
+endmodule
