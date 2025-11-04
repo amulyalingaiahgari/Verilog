@@ -1,4 +1,4 @@
-module hs(diff, borrow, a, b, c);
+module fs(diff, borrow, a, b, c);
     input a, b, c;
     output diff, borrow;
 	
