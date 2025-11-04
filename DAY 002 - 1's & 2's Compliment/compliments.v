@@ -7,7 +7,7 @@ always @(*) begin
     num_out=(-num_in)+1;
   end
   else begin
-    num_out =- num_in;
+    num_out = -num_in;
   end
 end
 endmodule
