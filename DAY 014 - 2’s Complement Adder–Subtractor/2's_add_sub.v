@@ -1,11 +1,11 @@
-module rca_s (c3, s, A, B, cin) ;
+module add_sub (c3, s, A, B, cin) ;
 input [3:0]A,B;
 input cin;
 output [3:0]s;
 output c3;
   
 wire co,cl,c2;
-  wire b0,b1,b2,b3;
+wire b0,b1,b2,b3;
   
 assign b0=cin^B[o];
 assign bl=cin^B[1];
