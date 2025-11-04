@@ -1,5 +1,5 @@
 //======================================================
-// Day 9 - Testbench for K-map simplifications
+// Day 7 - Testbench for K-map simplifications
 //======================================================
 module tb_kmap;
 
