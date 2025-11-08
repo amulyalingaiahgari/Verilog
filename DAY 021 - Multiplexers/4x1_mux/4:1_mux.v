@@ -1,4 +1,4 @@
-module mux_example(
+module mux_4x1(
   input [1:0] sel,
   input  i0,i1,i2,i3,
   output reg y);
