@@ -1,23 +1,33 @@
-module fa(a,b,c,sum,carry);
-   input a,b,c;
-	output sum,carry;
+// Full Adder using two 4x1 Multiplexers
+module full_adder_using_mux (
+    input A, B, Cin,
+    output Sum, Cout
+);
 
-	wire w1;
-	
-	not n1(w1,c);
-	mux_4x1 m1(c,w1,w1,c,b,a,sum);
-  mux_4x1 m2(1'b0,c,c,1'b1,b,a,carry);
+    // Wires for MUX select inputs
+    wire [1:0] sel = {A, B};
 
+    // --- SUM MUX ---
+    mux4x1 mux_sum (
+        .in({Cin, ~Cin, ~Cin, Cin}),  // I3 I2 I1 I0
+        .sel(sel),
+        .out(Sum)
+    );
+
+    // --- CARRY MUX ---
+    mux4x1 mux_carry (
+        .in({1'b1, Cin, Cin, 1'b0}),  // I3 I2 I1 I0
+        .sel(sel),
+        .out(Cout)
+    );
 endmodule
 
 
-module mux_4x1(a,b,c,d,s0,s1,y);
-	input a,b,c,d;
-	input s0,s1;
-	output y;
-	
-	assign y = (!s1)&(!s0)&a |
-					(!s1)&(s0)&b |
-					(s1)&(!s0)&c |
-					(s1)&(s0)&d;
+// 4x1 Multiplexer
+module mux4x1 (
+    input [3:0] in,
+    input [1:0] sel,
+    output out
+);
+    assign out = in[sel];
 endmodule
