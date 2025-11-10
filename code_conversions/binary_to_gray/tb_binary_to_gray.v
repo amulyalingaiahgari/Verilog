@@ -1,22 +1,18 @@
-module b_to_g_tb;
-	// Inputs
-	reg [3:0] b;
-	// Outputs
-	wire [3:0] g;
-	
-	integer i;
+module tb_binary_to_gray;
+    reg  [3:0] bin;
+    wire [3:0] gray;
 
-	// Instantiate the Unit Under Test (UUT)
-	b_to_g uut (.b(b), .g(g));
+    binary_to_gray dut(.bin(bin), .gray(gray));
 
-	initial begin
-		// Initialize Inputs
-		for(i=0; i<16; i=i+1)
-			begin
-				b=i;
-				#10;
-			end
-			$finish;
-	end
-      
+    initial begin
+        $monitor("Time=%0t | Binary=%b | Gray=%b", $time, bin, gray);
+
+        bin = 4'b0000; #5;
+        bin = 4'b0001; #5;
+        bin = 4'b0010; #5;
+        bin = 4'b0100; #5;
+        bin = 4'b1111; #5;
+        bin = 4'b1010; #5;
+        $finish;
+    end
 endmodule
