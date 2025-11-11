@@ -1,4 +1,4 @@
-module sr_latch_en (
+module sr_latch (
   input s, r, en,
   output reg q,
   output qbar
