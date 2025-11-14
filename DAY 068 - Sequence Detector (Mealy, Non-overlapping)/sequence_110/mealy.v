@@ -4,6 +4,7 @@ module non_mealy (
   input rst,
   input data_in,
   output reg data_out );
+  
   reg [1:0]state;
   reg [1:0]next_state;
 
@@ -21,31 +22,31 @@ module non_mealy (
   always @(state, data_in) begin
     case (state)
       s0:begin
-        data out <= 0;
+        data out = 0;
         if(data_in)
-          next_state <= s1;
+          next_state = s1;
         else
-          next_state <= s0;
+          next_state = s0;
       end
       sl:begin
-        data_out <= 0;
+        data_out = 0;
         if(data in)
-          next_state <= s2;
+          next_state = s2;
         else
-          next_state <= s0;
+          next_state = s0;
       end
       s2:begin
         if(data_in) begin
-          data_out <= 0;
-          next_state <= s2;
+          data_out = 0;
+          next_state = s2;
         end
         else begin
-          data_out <= 1;
-          next_state <= s0;
+          data_out = 1;
+          next_state = s0;
         end
       end
       default:begin
-        state<=s0;
+        state = s0;
       end
     endcase
   end
