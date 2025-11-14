@@ -3,6 +3,7 @@ module moore (
   input rst,
   input data_in,
   output reg data_out );
+  
   reg [1:0] state, next_state;
 
   parameter s0=2'b00,
@@ -20,32 +21,32 @@ module moore (
   always @(state, data_in) begin
     case (state)
       s0:begin
-        data_out <= 0;
+        data_out = 0;
         if(data_in)
-          next_state <= s1;
+          next_state = s1;
         else
-          next_state <= s0;
+          next_state = s0;
       end
       sl:begin
-        data out <= 0;
+        data out = 0;
         if(data_in)
-          next_state <= s1;
+          next_state = s1;
         else
-          next_state <= s2;
+          next_state = s2;
       end
       s2:begin
-        data_out <= 0;
+        data_out = 0;
         if(data_in)
-          next_state <= s3;
+          next_state = s3;
         else
-          next_state <= s0;
+          next_state = s0;
       end
       s3:begin
-        data_out<=1;
+        data_out = 1;
         if(data_in)
-          next_state<=s1;
+          next_state = s1;
         else
-        next_state<=s0;
+        next_state = s0;
       end
     endcase
   end
