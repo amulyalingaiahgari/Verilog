@@ -6,7 +6,9 @@ module tb_mealy;
   wire data_out;
 
   non_mealy uut(clk,rst,data_in,data_out);
+  
   always #2 clk = ~clk;
+  
   initial begin
     clk=0;
     rst=1;
