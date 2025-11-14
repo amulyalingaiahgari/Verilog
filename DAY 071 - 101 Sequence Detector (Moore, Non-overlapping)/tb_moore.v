@@ -5,7 +5,9 @@ module tb_moore;
   wire data_out;
 
   moore uut(clk, rst, data_in, data_out) ;
-  always #2 clk =~ clk;
+  
+  always #2 clk = ~clk;
+  
   initial begin
     clk=0;
     rst=1;
