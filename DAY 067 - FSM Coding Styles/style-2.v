@@ -2,7 +2,7 @@
 //-One block: State register
 //-One block: Next-state logic
 //-Outputs generated using continuous assignments
-// 2-Process Moore FSM (Next-state logic + Registered state + separate output decode)
+//// 2-Process Moore FSM (Next-state logic + Registered state + separate output decode) ////
 module fsm (
   input clk,
   input rst,
@@ -28,23 +28,23 @@ module fsm (
   
   //Next state logic
   always @(*) begin
-    next_state <= IDLE;
+    next_state = IDLE;
     case (state)
       IDLE:begin
         if(g0)
-          next_state <= s1;
+          next_state = s1;
       end
       sl:begin
-        next_state <= s2;
+        next_state = s2;
       end
       s2:begin
         if (ws)
-          next_state <= s1;
+          next_state = s1;
         else
-          next_state <= s3;
+          next_state = s3;
       end
       s3:begin
-        next_state<=IDLE;
+        next_state=IDLE;
       end
     endcase
   end
